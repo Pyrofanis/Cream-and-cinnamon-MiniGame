@@ -1,9 +1,7 @@
 {
     "name": "MiniGamePcCacpReal",
     "rootNamespace": "",
-    "references": [
-        "GUID:91186bb091617214892a25af422c7d9d"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
