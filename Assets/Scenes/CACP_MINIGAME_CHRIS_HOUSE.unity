@@ -192,7 +192,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -620310979
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92cc75061a0bc904d9945386929d7f0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -731,7 +731,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -74409671
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 792e5bb3495cbe740a6995f0faed8422, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -840,11 +840,6 @@ GameObject:
   - component: {fileID: 623223067}
   - component: {fileID: 623223069}
   - component: {fileID: 623223068}
-  - component: {fileID: 623223073}
-  - component: {fileID: 623223072}
-  - component: {fileID: 623223071}
-  - component: {fileID: 623223070}
-  - component: {fileID: 623223074}
   m_Layer: 0
   m_Name: Cjui
   m_TagString: Untagged
@@ -906,74 +901,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.07, y: 0.63}
   m_Size: {x: 1.57, y: 0.68}
   m_Direction: 1
---- !u!114 &623223070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623223066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b178b9af439e5f844a0529e12479b4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Is3Dimensional: 0
-  speed: 2
-  jumpSpeed: 500
---- !u!114 &623223071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623223066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 162262e023e426440aa4fb932de01f23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &623223072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623223066}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a92aa3ab30a4e140ba72c69ee89a50c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &623223073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623223066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c66a41efa69d1b4fa4d0788f2261b37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &623223074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623223066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71876d20165e2f74d880f8b52706a469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneNVirtualCameras:
-  - objectName: dungeon
-    objectWithVirtualCamera: {fileID: 1337933188}
-  - objectName: ending
-    objectWithVirtualCamera: {fileID: 623223066}
 --- !u!1 &641230263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,11 +2268,6 @@ GameObject:
   - component: {fileID: 1337933189}
   - component: {fileID: 1337933195}
   - component: {fileID: 1337933194}
-  - component: {fileID: 1337933193}
-  - component: {fileID: 1337933192}
-  - component: {fileID: 1337933191}
-  - component: {fileID: 1337933190}
-  - component: {fileID: 1337933196}
   m_Layer: 0
   m_Name: Char
   m_TagString: Untagged
@@ -2370,57 +2292,6 @@ Transform:
   m_Father: {fileID: 685228608}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1337933190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337933188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b178b9af439e5f844a0529e12479b4aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Is3Dimensional: 0
-  speed: 5
-  jumpSpeed: 1000
---- !u!114 &1337933191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337933188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 162262e023e426440aa4fb932de01f23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1337933192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337933188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a92aa3ab30a4e140ba72c69ee89a50c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1337933193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337933188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c66a41efa69d1b4fa4d0788f2261b37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1337933194
 Rigidbody2D:
   serializedVersion: 4
@@ -2458,23 +2329,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.00605914, y: 0.72}
   m_Size: {x: 1.2, y: 1.4}
   m_Direction: 0
---- !u!114 &1337933196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337933188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71876d20165e2f74d880f8b52706a469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneNVirtualCameras:
-  - objectName: dungeon
-    objectWithVirtualCamera: {fileID: 1337933188}
-  - objectName: ending
-    objectWithVirtualCamera: {fileID: 623223066}
 --- !u!1 &1351332915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,7 +2549,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -74409671
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bc48db7702411384eb003be1ea63251f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2797,7 +2651,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -620310979
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dec6e023937f2ac499c127dc503de475, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
