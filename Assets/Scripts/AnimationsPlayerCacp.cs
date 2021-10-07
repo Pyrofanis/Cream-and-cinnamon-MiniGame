@@ -32,32 +32,32 @@ public class AnimationsPlayerCacp : MonoBehaviour
     }
     private void Updaters()
     {
-        StateUpdter();
-        UpdateDirection();
+        //StateUpdter();
+        //UpdateDirection();
     }
-    private void StateUpdter()
-    {
-        if (PlayersMovement.MovementDirection().x != 0)
-        {
-            currentState = AnimationState.walking;
-        }
-        else
-        {
-            currentState = AnimationState.idle;
-        }
-    }
-    private void UpdateDirection()
-    {
-        if (PlayersMovement.MovementDirection().x >= 0)
-        {
-            currentDirection = Direction.right;
-        }
-        else
-        {
-            currentDirection = Direction.left;
+    //private void StateUpdter()
+    //{
+    //    if (PlayersMovement.MovementDirection().x != 0)
+    //    {
+    //        currentState = AnimationState.walking;
+    //    }
+    //    else
+    //    {
+    //        currentState = AnimationState.idle;
+    //    }
+    //}
+    //private void UpdateDirection()
+    //{
+    //    if (PlayersMovement.MovementDirection().x >= 0)
+    //    {
+    //        currentDirection = Direction.right;
+    //    }
+    //    else
+    //    {
+    //        currentDirection = Direction.left;
 
-        }
-    }
+    //    }
+    //}
     private void Applier()
     {
         ApplyClip(currentState);

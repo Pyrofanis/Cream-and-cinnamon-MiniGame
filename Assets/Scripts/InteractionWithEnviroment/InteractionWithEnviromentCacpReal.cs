@@ -18,27 +18,27 @@ public class InteractionWithEnviromentCacpReal : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<PlayerMoveState>())
-        {
-            currentAnimator.SetBool("Play", true);
-        }
+        //if (collision.GetComponent<PlayerMoveState>())
+        //{
+        //    currentAnimator.SetBool("Play", true);
+        //}
         
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        if (collision.GetComponent<PlayerMoveState>())
-        {
-            currentAnimator.SetBool("Play", true);
+        //if (collision.GetComponent<PlayerMoveState>())
+        //{
+        //    currentAnimator.SetBool("Play", true);
 
-        }
+        //}
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
 
-        if (collision.GetComponent<PlayerMoveState>())
-        {
-            currentAnimator.SetBool("Play", false);
-        }
+        //if (collision.GetComponent<PlayerMoveState>())
+        //{
+        //    currentAnimator.SetBool("Play", false);
+        //}
     }
 }
