@@ -10,35 +10,29 @@ public class InteractionWithEnviromentCacpReal : MonoBehaviour
     {
         currentAnimator = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.GetComponent<PlayerMoveState>())
-        //{
-        //    currentAnimator.SetBool("Play", true);
-        //}
-        
+        if (collision.GetComponent<PlayerGeneralControlls>())
+        {
+            currentAnimator.SetBool("Play", true);
+        }
+
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        //if (collision.GetComponent<PlayerMoveState>())
-        //{
-        //    currentAnimator.SetBool("Play", true);
+        if (collision.GetComponent<PlayerGeneralControlls>())
+        {
+            currentAnimator.SetBool("Play", true);
 
-        //}
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
 
-        //if (collision.GetComponent<PlayerMoveState>())
-        //{
-        //    currentAnimator.SetBool("Play", false);
-        //}
+        if (collision.GetComponent<PlayerGeneralControlls>())
+        {
+            currentAnimator.SetBool("Play", false);
+        }
     }
 }

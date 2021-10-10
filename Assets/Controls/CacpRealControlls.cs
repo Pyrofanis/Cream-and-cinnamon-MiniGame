@@ -27,25 +27,17 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""left"",
-                    ""type"": ""Button"",
-                    ""id"": ""60465ddf-378e-4d0e-aa3c-a3e7985f0f78"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""right"",
-                    ""type"": ""Button"",
-                    ""id"": ""0a8b9124-0ba9-4ed4-acad-5d592b77f209"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Shoot"",
                     ""type"": ""Button"",
                     ""id"": ""8d2b9089-e349-4830-ac1e-c1c3821df770"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""HorizontalMovement"",
+                    ""type"": ""Button"",
+                    ""id"": ""9fa9f21d-fa10-48a3-b24c-78c94871121e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -98,94 +90,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2e811639-b2c4-4d41-8dab-036bf9381c7f"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""left"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""71157d06-acfd-4447-97c2-7a1f2f9cbe4b"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""left"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1d120860-7e86-46aa-8ca1-5e238a6cbd40"",
-                    ""path"": ""<Gamepad>/dpad/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""left"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7d523a6d-fe06-49ce-8ca2-d4ba5b2f4754"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""left"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0d67e0fa-c31a-4070-bb28-b5773912eca7"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""right"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a00a137e-9154-4088-ba55-c6f67a58ac14"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""right"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""959dc297-b8f2-44ac-bf59-a5a1542b838c"",
-                    ""path"": ""<Gamepad>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""right"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""395766f0-0dd7-419c-af54-e19bf2e7ec17"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""right"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""016a6a6b-c547-4335-9444-6bfbb741c58a"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
@@ -205,6 +109,138 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""PcAD"",
+                    ""id"": ""cbeb9585-6d94-4fd1-ac8d-3663c2102897"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""PC<-,->"",
+                    ""id"": ""78b32bf9-60d2-48ab-ab22-fa3e0fa87771"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""aac12d1b-aeeb-4c16-b5d3-99a5fac96329"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""95cdf6a8-eb80-4f1a-a1aa-ce69da4fe9ca"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""57541f01-62c4-42d5-9f4a-71f173528449"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""GamePadStick"",
+                    ""id"": ""6bad3e56-edc2-404b-8381-dabaa0aa46a2"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""898ae28e-1793-4d55-9241-cee87481c9b8"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""8820d122-c614-4628-a73c-9bff167d4bb8"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""7ab20f69-b79b-43e7-a941-9eecee2e1f3f"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Gamepad<-,->"",
+                    ""id"": ""0413bc45-b933-4983-bf1c-cfc4bf935f54"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""795c3389-f39b-45ff-9bd1-1abfa004962b"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""dd1fe846-13b2-48c6-9950-92729f63590b"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -281,17 +317,9 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
             ""id"": ""bb5d58e8-3b18-49c1-96b2-3859d9cad579"",
             ""actions"": [
                 {
-                    ""name"": ""right"",
+                    ""name"": ""HorizontalMovement"",
                     ""type"": ""Button"",
-                    ""id"": ""bb820ca2-642c-46b6-8a91-5613ee46380a"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""left"",
-                    ""type"": ""Button"",
-                    ""id"": ""9e424d21-a060-4a08-8ef1-5d5e5e671c38"",
+                    ""id"": ""ad4a19b9-8e0f-480c-af75-0e5babe93f3a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -299,92 +327,136 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""5e285892-7cdf-4a87-86a3-8ec30d1d6f12"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""name"": ""PcAD"",
+                    ""id"": ""ed64d382-a2b4-4ace-af3c-5e160ec8862a"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""left"",
-                    ""isComposite"": false,
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""76781f99-3afd-4cd7-adfe-957c8420a647"",
+                    ""name"": ""PC<-,->"",
+                    ""id"": ""166641a9-9d11-4169-aa7f-581379c3a480"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""8d70b467-a7f4-4519-b70f-e503d1846419"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""left"",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""37cc47c6-2f23-4456-9671-4ad3286ac690"",
-                    ""path"": ""<Gamepad>/dpad/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""left"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f5721155-81f7-4fed-ab04-f5be31c98123"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""left"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""aead4d17-3d4c-46e3-99e0-3f9b8f284f6f"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""right"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""19dd2f81-0ba3-493c-a82b-53395fe893e1"",
+                    ""name"": ""positive"",
+                    ""id"": ""f372b39b-667a-4bc4-9869-714001033725"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""right"",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""0cc827a2-7f0e-430e-8221-d708addf5f5d"",
-                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""name"": ""negative"",
+                    ""id"": ""78e05e20-2738-4207-97d4-3c9c550c3d13"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""right"",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
                     ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""GamePadStick"",
+                    ""id"": ""e5e92f46-1855-4ba7-a0fa-d6b6210a0383"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""2dbe7c98-4496-4c93-9535-f67a6e003ad5"",
+                    ""name"": ""negative"",
+                    ""id"": ""223ad368-a1ce-40e5-bac0-7d9a05671020"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""4a5f7ee1-9281-46ce-9b36-33b3743d105d"",
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""FightingSceme"",
-                    ""action"": ""right"",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
                     ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""ed5a0fec-8ed9-46a8-915e-7bd2e6c74bc3"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Gamepad<-,->"",
+                    ""id"": ""4a04f280-e407-4d12-80d7-9813c23091e7"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""3db2fbea-59c5-4629-bf04-568637a59ec3"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""e0e9a248-21f9-4395-8a03-8c37f733312d"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HorizontalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -416,17 +488,15 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         // MovementSchemeFighting
         m_MovementSchemeFighting = asset.FindActionMap("MovementSchemeFighting", throwIfNotFound: true);
         m_MovementSchemeFighting_Jump = m_MovementSchemeFighting.FindAction("Jump", throwIfNotFound: true);
-        m_MovementSchemeFighting_left = m_MovementSchemeFighting.FindAction("left", throwIfNotFound: true);
-        m_MovementSchemeFighting_right = m_MovementSchemeFighting.FindAction("right", throwIfNotFound: true);
         m_MovementSchemeFighting_Shoot = m_MovementSchemeFighting.FindAction("Shoot", throwIfNotFound: true);
+        m_MovementSchemeFighting_HorizontalMovement = m_MovementSchemeFighting.FindAction("HorizontalMovement", throwIfNotFound: true);
         // Ui
         m_Ui = asset.FindActionMap("Ui", throwIfNotFound: true);
         m_Ui_Pause = m_Ui.FindAction("Pause", throwIfNotFound: true);
         m_Ui_Exit = m_Ui.FindAction("Exit", throwIfNotFound: true);
         // MovementSchemeNoFighting
         m_MovementSchemeNoFighting = asset.FindActionMap("MovementSchemeNoFighting", throwIfNotFound: true);
-        m_MovementSchemeNoFighting_right = m_MovementSchemeNoFighting.FindAction("right", throwIfNotFound: true);
-        m_MovementSchemeNoFighting_left = m_MovementSchemeNoFighting.FindAction("left", throwIfNotFound: true);
+        m_MovementSchemeNoFighting_HorizontalMovement = m_MovementSchemeNoFighting.FindAction("HorizontalMovement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -477,17 +547,15 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
     private readonly InputActionMap m_MovementSchemeFighting;
     private IMovementSchemeFightingActions m_MovementSchemeFightingActionsCallbackInterface;
     private readonly InputAction m_MovementSchemeFighting_Jump;
-    private readonly InputAction m_MovementSchemeFighting_left;
-    private readonly InputAction m_MovementSchemeFighting_right;
     private readonly InputAction m_MovementSchemeFighting_Shoot;
+    private readonly InputAction m_MovementSchemeFighting_HorizontalMovement;
     public struct MovementSchemeFightingActions
     {
         private @CacpRealControlls m_Wrapper;
         public MovementSchemeFightingActions(@CacpRealControlls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_MovementSchemeFighting_Jump;
-        public InputAction @left => m_Wrapper.m_MovementSchemeFighting_left;
-        public InputAction @right => m_Wrapper.m_MovementSchemeFighting_right;
         public InputAction @Shoot => m_Wrapper.m_MovementSchemeFighting_Shoot;
+        public InputAction @HorizontalMovement => m_Wrapper.m_MovementSchemeFighting_HorizontalMovement;
         public InputActionMap Get() { return m_Wrapper.m_MovementSchemeFighting; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -500,15 +568,12 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnJump;
-                @left.started -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnLeft;
-                @left.performed -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnLeft;
-                @left.canceled -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnLeft;
-                @right.started -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnRight;
-                @right.performed -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnRight;
-                @right.canceled -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnRight;
                 @Shoot.started -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnShoot;
+                @HorizontalMovement.started -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnHorizontalMovement;
+                @HorizontalMovement.performed -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnHorizontalMovement;
+                @HorizontalMovement.canceled -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnHorizontalMovement;
             }
             m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface = instance;
             if (instance != null)
@@ -516,15 +581,12 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @left.started += instance.OnLeft;
-                @left.performed += instance.OnLeft;
-                @left.canceled += instance.OnLeft;
-                @right.started += instance.OnRight;
-                @right.performed += instance.OnRight;
-                @right.canceled += instance.OnRight;
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
+                @HorizontalMovement.started += instance.OnHorizontalMovement;
+                @HorizontalMovement.performed += instance.OnHorizontalMovement;
+                @HorizontalMovement.canceled += instance.OnHorizontalMovement;
             }
         }
     }
@@ -574,14 +636,12 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
     // MovementSchemeNoFighting
     private readonly InputActionMap m_MovementSchemeNoFighting;
     private IMovementSchemeNoFightingActions m_MovementSchemeNoFightingActionsCallbackInterface;
-    private readonly InputAction m_MovementSchemeNoFighting_right;
-    private readonly InputAction m_MovementSchemeNoFighting_left;
+    private readonly InputAction m_MovementSchemeNoFighting_HorizontalMovement;
     public struct MovementSchemeNoFightingActions
     {
         private @CacpRealControlls m_Wrapper;
         public MovementSchemeNoFightingActions(@CacpRealControlls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @right => m_Wrapper.m_MovementSchemeNoFighting_right;
-        public InputAction @left => m_Wrapper.m_MovementSchemeNoFighting_left;
+        public InputAction @HorizontalMovement => m_Wrapper.m_MovementSchemeNoFighting_HorizontalMovement;
         public InputActionMap Get() { return m_Wrapper.m_MovementSchemeNoFighting; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -591,22 +651,16 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface != null)
             {
-                @right.started -= m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface.OnRight;
-                @right.performed -= m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface.OnRight;
-                @right.canceled -= m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface.OnRight;
-                @left.started -= m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface.OnLeft;
-                @left.performed -= m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface.OnLeft;
-                @left.canceled -= m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface.OnLeft;
+                @HorizontalMovement.started -= m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface.OnHorizontalMovement;
+                @HorizontalMovement.performed -= m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface.OnHorizontalMovement;
+                @HorizontalMovement.canceled -= m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface.OnHorizontalMovement;
             }
             m_Wrapper.m_MovementSchemeNoFightingActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @right.started += instance.OnRight;
-                @right.performed += instance.OnRight;
-                @right.canceled += instance.OnRight;
-                @left.started += instance.OnLeft;
-                @left.performed += instance.OnLeft;
-                @left.canceled += instance.OnLeft;
+                @HorizontalMovement.started += instance.OnHorizontalMovement;
+                @HorizontalMovement.performed += instance.OnHorizontalMovement;
+                @HorizontalMovement.canceled += instance.OnHorizontalMovement;
             }
         }
     }
@@ -623,9 +677,8 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
     public interface IMovementSchemeFightingActions
     {
         void OnJump(InputAction.CallbackContext context);
-        void OnLeft(InputAction.CallbackContext context);
-        void OnRight(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+        void OnHorizontalMovement(InputAction.CallbackContext context);
     }
     public interface IUiActions
     {
@@ -634,7 +687,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
     }
     public interface IMovementSchemeNoFightingActions
     {
-        void OnRight(InputAction.CallbackContext context);
-        void OnLeft(InputAction.CallbackContext context);
+        void OnHorizontalMovement(InputAction.CallbackContext context);
     }
 }

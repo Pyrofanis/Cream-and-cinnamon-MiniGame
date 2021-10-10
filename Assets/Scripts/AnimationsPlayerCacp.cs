@@ -17,6 +17,7 @@ public class AnimationsPlayerCacp : MonoBehaviour
     }
     private Direction currentDirection;
 
+    private float movement;
     private Vector2 initialScale;
     private Animator animator;
     private void Start()
@@ -32,32 +33,34 @@ public class AnimationsPlayerCacp : MonoBehaviour
     }
     private void Updaters()
     {
-        //StateUpdter();
-        //UpdateDirection();
-    }
-    //private void StateUpdter()
-    //{
-    //    if (PlayersMovement.MovementDirection().x != 0)
-    //    {
-    //        currentState = AnimationState.walking;
-    //    }
-    //    else
-    //    {
-    //        currentState = AnimationState.idle;
-    //    }
-    //}
-    //private void UpdateDirection()
-    //{
-    //    if (PlayersMovement.MovementDirection().x >= 0)
-    //    {
-    //        currentDirection = Direction.right;
-    //    }
-    //    else
-    //    {
-    //        currentDirection = Direction.left;
+        movement = PlayerGeneralControlls.inputActions.MovementSchemeNoFighting.HorizontalMovement.ReadValue<float>();
 
-    //    }
-    //}
+        StateUpdter();
+        UpdateDirection();
+    }
+    private void StateUpdter()
+    {
+        if (movement != 0)
+        {
+            currentState = AnimationState.walking;
+        }
+        else
+        {
+            currentState = AnimationState.idle;
+        }
+    }
+    private void UpdateDirection()
+    {
+        if (movement >= 0)
+        {
+            currentDirection = Direction.right;
+        }
+        else
+        {
+            currentDirection = Direction.left;
+
+        }
+    }
     private void Applier()
     {
         ApplyClip(currentState);
