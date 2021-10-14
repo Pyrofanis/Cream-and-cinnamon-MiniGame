@@ -26,8 +26,8 @@ public class PlayerGeneralControlls : MonoBehaviour
     private GameObject bullPrefab;
 
     private float shootTimer;
-    [SerializeField]
-    private GroundType currentGroundType;
+    //used by shooting direction
+    public static GroundType currentGroundType;
     private Rigidbody2D rb;
    public static CacpRealControlls inputActions;
     private void Awake()

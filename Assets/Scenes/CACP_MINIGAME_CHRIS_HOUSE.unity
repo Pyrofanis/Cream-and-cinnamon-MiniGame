@@ -2855,7 +2855,6 @@ MonoBehaviour:
   jumpPower: 1
   controllScheme: 1
   bullPrefab: {fileID: 0}
-  currentGroundType: 0
 --- !u!1 &641230263
 GameObject:
   m_ObjectHideFlags: 0
@@ -6509,7 +6508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa5115dad6a75c4b98e68bd24a4045e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunSprite: {fileID: 1693550575}
+  currentControll: 0
+  gunObj: {fileID: 1693550575}
   rangeOfObject: 0.5
 --- !u!1 &1321836953
 GameObject:
@@ -6823,7 +6823,6 @@ MonoBehaviour:
   jumpPower: 240
   controllScheme: 0
   bullPrefab: {fileID: 0}
-  currentGroundType: 0
 --- !u!50 &1337933194
 Rigidbody2D:
   serializedVersion: 4

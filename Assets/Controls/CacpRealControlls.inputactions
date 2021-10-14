@@ -28,14 +28,6 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
-                },
-                {
-                    "name": "Aim",
-                    "type": "Value",
-                    "id": "d4b4ef72-2961-4344-9f24-bbf4e4f74489",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -236,17 +228,6 @@
                     "action": "HorizontalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "10d49c9d-7155-4e43-ace0-b6cffc5b14e8",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Aim",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -463,6 +444,79 @@
                     "action": "HorizontalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "AimPc",
+            "id": "da592005-a4c5-4e25-8c6e-0b4c9160cbd7",
+            "actions": [
+                {
+                    "name": "ActivateAIM",
+                    "type": "Value",
+                    "id": "31617c9b-d588-4aa1-98a6-3b66c6dc81b1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Aim",
+                    "type": "Value",
+                    "id": "6da2c262-1778-4136-86e5-da313d97b212",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d9429f37-e67e-4b61-a815-16aa22601988",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ActivateAIM",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e02cf3a9-405c-453e-b8db-e29a47c40572",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "AimConsole",
+            "id": "0229a468-e148-4bed-b8ac-c6317cd34bf2",
+            "actions": [
+                {
+                    "name": "AimConsole",
+                    "type": "Value",
+                    "id": "5792268b-7b6c-4960-89ba-51b39d39f83f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "57502a5c-7022-4e32-a90e-d04c977a617b",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimConsole",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

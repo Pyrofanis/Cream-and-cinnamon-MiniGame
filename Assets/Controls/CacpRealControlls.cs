@@ -41,14 +41,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""Aim"",
-                    ""type"": ""Value"",
-                    ""id"": ""d4b4ef72-2961-4344-9f24-bbf4e4f74489"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -249,17 +241,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                     ""action"": ""HorizontalMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""10d49c9d-7155-4e43-ace0-b6cffc5b14e8"",
-                    ""path"": ""<Mouse>/position"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Aim"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -478,6 +459,79 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""AimPc"",
+            ""id"": ""da592005-a4c5-4e25-8c6e-0b4c9160cbd7"",
+            ""actions"": [
+                {
+                    ""name"": ""ActivateAIM"",
+                    ""type"": ""Value"",
+                    ""id"": ""31617c9b-d588-4aa1-98a6-3b66c6dc81b1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Value"",
+                    ""id"": ""6da2c262-1778-4136-86e5-da313d97b212"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d9429f37-e67e-4b61-a815-16aa22601988"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActivateAIM"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e02cf3a9-405c-453e-b8db-e29a47c40572"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""AimConsole"",
+            ""id"": ""0229a468-e148-4bed-b8ac-c6317cd34bf2"",
+            ""actions"": [
+                {
+                    ""name"": ""AimConsole"",
+                    ""type"": ""Value"",
+                    ""id"": ""5792268b-7b6c-4960-89ba-51b39d39f83f"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""57502a5c-7022-4e32-a90e-d04c977a617b"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AimConsole"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -514,7 +568,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         m_MovementSchemeFighting_Jump = m_MovementSchemeFighting.FindAction("Jump", throwIfNotFound: true);
         m_MovementSchemeFighting_Shoot = m_MovementSchemeFighting.FindAction("Shoot", throwIfNotFound: true);
         m_MovementSchemeFighting_HorizontalMovement = m_MovementSchemeFighting.FindAction("HorizontalMovement", throwIfNotFound: true);
-        m_MovementSchemeFighting_Aim = m_MovementSchemeFighting.FindAction("Aim", throwIfNotFound: true);
         // Ui
         m_Ui = asset.FindActionMap("Ui", throwIfNotFound: true);
         m_Ui_Pause = m_Ui.FindAction("Pause", throwIfNotFound: true);
@@ -522,6 +575,13 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         // MovementSchemeNoFighting
         m_MovementSchemeNoFighting = asset.FindActionMap("MovementSchemeNoFighting", throwIfNotFound: true);
         m_MovementSchemeNoFighting_HorizontalMovement = m_MovementSchemeNoFighting.FindAction("HorizontalMovement", throwIfNotFound: true);
+        // AimPc
+        m_AimPc = asset.FindActionMap("AimPc", throwIfNotFound: true);
+        m_AimPc_ActivateAIM = m_AimPc.FindAction("ActivateAIM", throwIfNotFound: true);
+        m_AimPc_Aim = m_AimPc.FindAction("Aim", throwIfNotFound: true);
+        // AimConsole
+        m_AimConsole = asset.FindActionMap("AimConsole", throwIfNotFound: true);
+        m_AimConsole_AimConsole = m_AimConsole.FindAction("AimConsole", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -574,7 +634,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
     private readonly InputAction m_MovementSchemeFighting_Jump;
     private readonly InputAction m_MovementSchemeFighting_Shoot;
     private readonly InputAction m_MovementSchemeFighting_HorizontalMovement;
-    private readonly InputAction m_MovementSchemeFighting_Aim;
     public struct MovementSchemeFightingActions
     {
         private @CacpRealControlls m_Wrapper;
@@ -582,7 +641,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         public InputAction @Jump => m_Wrapper.m_MovementSchemeFighting_Jump;
         public InputAction @Shoot => m_Wrapper.m_MovementSchemeFighting_Shoot;
         public InputAction @HorizontalMovement => m_Wrapper.m_MovementSchemeFighting_HorizontalMovement;
-        public InputAction @Aim => m_Wrapper.m_MovementSchemeFighting_Aim;
         public InputActionMap Get() { return m_Wrapper.m_MovementSchemeFighting; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -601,9 +659,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                 @HorizontalMovement.started -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.performed -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.canceled -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnHorizontalMovement;
-                @Aim.started -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnAim;
-                @Aim.performed -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnAim;
-                @Aim.canceled -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnAim;
             }
             m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface = instance;
             if (instance != null)
@@ -617,9 +672,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                 @HorizontalMovement.started += instance.OnHorizontalMovement;
                 @HorizontalMovement.performed += instance.OnHorizontalMovement;
                 @HorizontalMovement.canceled += instance.OnHorizontalMovement;
-                @Aim.started += instance.OnAim;
-                @Aim.performed += instance.OnAim;
-                @Aim.canceled += instance.OnAim;
             }
         }
     }
@@ -698,6 +750,80 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         }
     }
     public MovementSchemeNoFightingActions @MovementSchemeNoFighting => new MovementSchemeNoFightingActions(this);
+
+    // AimPc
+    private readonly InputActionMap m_AimPc;
+    private IAimPcActions m_AimPcActionsCallbackInterface;
+    private readonly InputAction m_AimPc_ActivateAIM;
+    private readonly InputAction m_AimPc_Aim;
+    public struct AimPcActions
+    {
+        private @CacpRealControlls m_Wrapper;
+        public AimPcActions(@CacpRealControlls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ActivateAIM => m_Wrapper.m_AimPc_ActivateAIM;
+        public InputAction @Aim => m_Wrapper.m_AimPc_Aim;
+        public InputActionMap Get() { return m_Wrapper.m_AimPc; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(AimPcActions set) { return set.Get(); }
+        public void SetCallbacks(IAimPcActions instance)
+        {
+            if (m_Wrapper.m_AimPcActionsCallbackInterface != null)
+            {
+                @ActivateAIM.started -= m_Wrapper.m_AimPcActionsCallbackInterface.OnActivateAIM;
+                @ActivateAIM.performed -= m_Wrapper.m_AimPcActionsCallbackInterface.OnActivateAIM;
+                @ActivateAIM.canceled -= m_Wrapper.m_AimPcActionsCallbackInterface.OnActivateAIM;
+                @Aim.started -= m_Wrapper.m_AimPcActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_AimPcActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_AimPcActionsCallbackInterface.OnAim;
+            }
+            m_Wrapper.m_AimPcActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ActivateAIM.started += instance.OnActivateAIM;
+                @ActivateAIM.performed += instance.OnActivateAIM;
+                @ActivateAIM.canceled += instance.OnActivateAIM;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
+            }
+        }
+    }
+    public AimPcActions @AimPc => new AimPcActions(this);
+
+    // AimConsole
+    private readonly InputActionMap m_AimConsole;
+    private IAimConsoleActions m_AimConsoleActionsCallbackInterface;
+    private readonly InputAction m_AimConsole_AimConsole;
+    public struct AimConsoleActions
+    {
+        private @CacpRealControlls m_Wrapper;
+        public AimConsoleActions(@CacpRealControlls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @AimConsole => m_Wrapper.m_AimConsole_AimConsole;
+        public InputActionMap Get() { return m_Wrapper.m_AimConsole; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(AimConsoleActions set) { return set.Get(); }
+        public void SetCallbacks(IAimConsoleActions instance)
+        {
+            if (m_Wrapper.m_AimConsoleActionsCallbackInterface != null)
+            {
+                @AimConsole.started -= m_Wrapper.m_AimConsoleActionsCallbackInterface.OnAimConsole;
+                @AimConsole.performed -= m_Wrapper.m_AimConsoleActionsCallbackInterface.OnAimConsole;
+                @AimConsole.canceled -= m_Wrapper.m_AimConsoleActionsCallbackInterface.OnAimConsole;
+            }
+            m_Wrapper.m_AimConsoleActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @AimConsole.started += instance.OnAimConsole;
+                @AimConsole.performed += instance.OnAimConsole;
+                @AimConsole.canceled += instance.OnAimConsole;
+            }
+        }
+    }
+    public AimConsoleActions @AimConsole => new AimConsoleActions(this);
     private int m_FightingScemeSchemeIndex = -1;
     public InputControlScheme FightingScemeScheme
     {
@@ -712,7 +838,6 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnHorizontalMovement(InputAction.CallbackContext context);
-        void OnAim(InputAction.CallbackContext context);
     }
     public interface IUiActions
     {
@@ -722,5 +847,14 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
     public interface IMovementSchemeNoFightingActions
     {
         void OnHorizontalMovement(InputAction.CallbackContext context);
+    }
+    public interface IAimPcActions
+    {
+        void OnActivateAIM(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
+    }
+    public interface IAimConsoleActions
+    {
+        void OnAimConsole(InputAction.CallbackContext context);
     }
 }
