@@ -41,6 +41,14 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Value"",
+                    ""id"": ""d4b4ef72-2961-4344-9f24-bbf4e4f74489"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -241,6 +249,17 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                     ""action"": ""HorizontalMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""10d49c9d-7155-4e43-ace0-b6cffc5b14e8"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -480,6 +499,11 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                     ""devicePath"": ""<Mouse>"",
                     ""isOptional"": false,
                     ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<VirtualMouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
                 }
             ]
         }
@@ -490,6 +514,7 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         m_MovementSchemeFighting_Jump = m_MovementSchemeFighting.FindAction("Jump", throwIfNotFound: true);
         m_MovementSchemeFighting_Shoot = m_MovementSchemeFighting.FindAction("Shoot", throwIfNotFound: true);
         m_MovementSchemeFighting_HorizontalMovement = m_MovementSchemeFighting.FindAction("HorizontalMovement", throwIfNotFound: true);
+        m_MovementSchemeFighting_Aim = m_MovementSchemeFighting.FindAction("Aim", throwIfNotFound: true);
         // Ui
         m_Ui = asset.FindActionMap("Ui", throwIfNotFound: true);
         m_Ui_Pause = m_Ui.FindAction("Pause", throwIfNotFound: true);
@@ -549,6 +574,7 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
     private readonly InputAction m_MovementSchemeFighting_Jump;
     private readonly InputAction m_MovementSchemeFighting_Shoot;
     private readonly InputAction m_MovementSchemeFighting_HorizontalMovement;
+    private readonly InputAction m_MovementSchemeFighting_Aim;
     public struct MovementSchemeFightingActions
     {
         private @CacpRealControlls m_Wrapper;
@@ -556,6 +582,7 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         public InputAction @Jump => m_Wrapper.m_MovementSchemeFighting_Jump;
         public InputAction @Shoot => m_Wrapper.m_MovementSchemeFighting_Shoot;
         public InputAction @HorizontalMovement => m_Wrapper.m_MovementSchemeFighting_HorizontalMovement;
+        public InputAction @Aim => m_Wrapper.m_MovementSchemeFighting_Aim;
         public InputActionMap Get() { return m_Wrapper.m_MovementSchemeFighting; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -574,6 +601,9 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                 @HorizontalMovement.started -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.performed -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.canceled -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnHorizontalMovement;
+                @Aim.started -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface.OnAim;
             }
             m_Wrapper.m_MovementSchemeFightingActionsCallbackInterface = instance;
             if (instance != null)
@@ -587,6 +617,9 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
                 @HorizontalMovement.started += instance.OnHorizontalMovement;
                 @HorizontalMovement.performed += instance.OnHorizontalMovement;
                 @HorizontalMovement.canceled += instance.OnHorizontalMovement;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
             }
         }
     }
@@ -679,6 +712,7 @@ public class @CacpRealControlls : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnHorizontalMovement(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
     }
     public interface IUiActions
     {

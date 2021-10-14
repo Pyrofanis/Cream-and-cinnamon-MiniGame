@@ -77,7 +77,6 @@ public class PlayerGeneralControlls : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.collider.name);
         if (collision.gameObject.tag.Contains("ground"))
         {
             currentGroundType=GroundType.ground;
@@ -85,7 +84,6 @@ public class PlayerGeneralControlls : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log(collision.collider.name);
 
         if (collision.gameObject.tag.Contains("ground"))
         {
