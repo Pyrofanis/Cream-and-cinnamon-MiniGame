@@ -19,13 +19,7 @@ public class PlayerGeneralControlls : MonoBehaviour
 
     [SerializeField]
     [Header("ControllType")]
-    private ControllType controllScheme;
-
-    [SerializeField]
-    [Header("Bullter Prefab")]
-    private GameObject bullPrefab;
-
-    private float shootTimer;
+    public ControllType controllScheme;
     //used by shooting direction
     public static GroundType currentGroundType;
     private Rigidbody2D rb;
@@ -44,12 +38,11 @@ public class PlayerGeneralControlls : MonoBehaviour
      if (controllScheme.Equals(ControllType.fighter))
         {
             inputActions.MovementSchemeFighting.Jump.performed += _ => Jump();
-            inputActions.MovementSchemeFighting.Shoot.performed += _ => Shoot();
+            //inputActions.MovementSchemeFighting.Shoot.performed += _ => Shoot();
         }   
     }
     private void Update()
     {
-        shootTimer += Time.deltaTime;
         Movement();
     }
     private void Movement()
@@ -65,16 +58,7 @@ public class PlayerGeneralControlls : MonoBehaviour
             currentGroundType=GroundType.air;
         }
     }
-    private void Shoot()
-    {
-        if (shootTimer >= 1.5f)
-        {
-            //Instantiate
 
-            //
-            shootTimer = 0;
-        }
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Contains("ground"))

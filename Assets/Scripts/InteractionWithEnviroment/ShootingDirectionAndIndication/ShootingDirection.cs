@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ShootingDirection : MonoBehaviour
+public class ShootingDirection : PlayerGeneralControlls
 {
     enum Controlls { pc, console }
 
@@ -12,7 +12,7 @@ public class ShootingDirection : MonoBehaviour
 
     [SerializeField]
     [Header("Sprite of Gun")]
-    private GameObject gunObj;
+    public GameObject gunObj;
     [Header("Range Relative to Char")]
     [SerializeField]
     [Range(0, 2)]
@@ -124,8 +124,8 @@ public class ShootingDirection : MonoBehaviour
                     gunSprite.flipY = false;
                 break;
         }
-        ////PC Adjustent
     }
+    ////PC Adjustent
     private void ActivateCalculation()
     {
         aimingActive = true;
