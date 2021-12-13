@@ -3214,7 +3214,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   jumpPower: 1
-  controllScheme: 1
 --- !u!1 &641230263
 GameObject:
   m_ObjectHideFlags: 0
@@ -7409,6 +7408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198396545}
   - component: {fileID: 1198396546}
+  - component: {fileID: 1198396548}
   - component: {fileID: 1198396547}
   m_Layer: 0
   m_Name: Sprite
@@ -7491,12 +7491,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198396544}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e123e9259b95042bbef6bf68b8dc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullPrefab: {fileID: 0}
+  range: 10
+--- !u!114 &1198396548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198396544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaa5115dad6a75c4b98e68bd24a4045e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  jumpPower: 0
-  controllScheme: 0
+  speed: 100
+  jumpPower: 500
   currentControll: 0
   gunObj: {fileID: 1693550575}
   rangeOfObject: 0.5
@@ -8296,7 +8309,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   jumpPower: 240
-  controllScheme: 0
 --- !u!50 &1337933194
 Rigidbody2D:
   serializedVersion: 4
@@ -8413,7 +8425,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351332915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.019999504, y: -2.4001398, z: -10}
+  m_LocalPosition: {x: -0.00000023841858, y: -2.4299994, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8441,6 +8453,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2

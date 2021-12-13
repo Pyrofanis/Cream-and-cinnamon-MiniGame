@@ -19,7 +19,7 @@ public class PlayerGeneralControlls : MonoBehaviour
 
     [SerializeField]
     [Header("ControllType")]
-    public ControllType controllScheme;
+    public static ControllType controllScheme;
     //used by shooting direction
     public static GroundType currentGroundType;
     private Rigidbody2D rb;

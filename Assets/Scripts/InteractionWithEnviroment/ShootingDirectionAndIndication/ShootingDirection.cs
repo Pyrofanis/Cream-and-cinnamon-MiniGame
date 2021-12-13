@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,8 @@ public class ShootingDirection : PlayerGeneralControlls
     private Vector3 mousePosRelativeToCamera, mouseDir, triggerDir;
     private bool aimingActive;
     private SpriteRenderer gunSprite;
+
+    public static Vector3 gunDirection;
     private void Awake()
     {
         gunSprite = gunObj.GetComponent<SpriteRenderer>();
@@ -41,6 +44,9 @@ public class ShootingDirection : PlayerGeneralControlls
 
         //flips Sprite
         FlipSprite();
+
+        //updatesGeneralDir For bullet
+        UpdateGeneralDir();
     }
     private void ControllsSwapper()
     {
@@ -148,6 +154,11 @@ public class ShootingDirection : PlayerGeneralControlls
     {
         aimingActive = false;
         mouseDir = Vector3.zero;
+    }
+    private void UpdateGeneralDir(){
+        gunDirection=mouseDir;
+        gunDirection=triggerDir;
+
     }
 }
 
