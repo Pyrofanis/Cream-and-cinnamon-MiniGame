@@ -123,6 +123,17 @@ public partial class @CacpRealControlls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""08bb8c94-848d-4553-b2f2-89f1c2bc330b"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""PcAD"",
                     ""id"": ""cbeb9585-6d94-4fd1-ac8d-3663c2102897"",
                     ""path"": ""1DAxis"",

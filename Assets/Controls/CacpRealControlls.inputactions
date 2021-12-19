@@ -11,7 +11,8 @@
                     "id": "2afb2ef5-dfa5-402b-9eb7-12caf3162f26",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Shoot",
@@ -19,7 +20,8 @@
                     "id": "8d2b9089-e349-4830-ac1e-c1c3821df770",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "HorizontalMovement",
@@ -27,7 +29,8 @@
                     "id": "9fa9f21d-fa10-48a3-b24c-78c94871121e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -93,6 +96,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "FightingSceme",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08bb8c94-848d-4553-b2f2-89f1c2bc330b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -241,7 +255,8 @@
                     "id": "80a237a6-4d47-4cff-b7da-3339a13fb151",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Exit",
@@ -249,7 +264,8 @@
                     "id": "ca648268-5bc4-4d44-8a4c-50dc5cde5579",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -309,7 +325,8 @@
                     "id": "ad4a19b9-8e0f-480c-af75-0e5babe93f3a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -457,7 +474,8 @@
                     "id": "31617c9b-d588-4aa1-98a6-3b66c6dc81b1",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Aim",
@@ -465,7 +483,8 @@
                     "id": "6da2c262-1778-4136-86e5-da313d97b212",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -503,7 +522,8 @@
                     "id": "5792268b-7b6c-4960-89ba-51b39d39f83f",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [

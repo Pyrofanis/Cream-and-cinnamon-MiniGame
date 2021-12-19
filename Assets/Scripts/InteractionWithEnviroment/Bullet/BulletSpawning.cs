@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletSpawning : MonoBehaviour
 {
+    [SerializeField]   
     private float shootTimer;
     [SerializeField]
     [Header("Bullter Prefab")]
@@ -11,7 +12,9 @@ public class BulletSpawning : MonoBehaviour
     [Range(0,10)]
     [SerializeField]
     private float range;
-
+    [SerializeField]
+    [Range(0,5)]
+    public float bulletSpeed;
     private GameObject gun;
 
     // Start is called before the first frame update
@@ -40,6 +43,7 @@ public class BulletSpawning : MonoBehaviour
             bullScrip.rotationOfBull=transform.rotation;
             bullScrip.range=range;
             bullScrip.currentGunDirection=ShootingDirection.gunDirection;
+            bullScrip.bulletSpeed=bulletSpeed;
             shootTimer = 0;
         }
     }

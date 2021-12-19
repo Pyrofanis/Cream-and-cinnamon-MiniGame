@@ -156,8 +156,15 @@ public class ShootingDirection : PlayerGeneralControlls
         mouseDir = Vector3.zero;
     }
     private void UpdateGeneralDir(){
-        gunDirection=mouseDir;
-        gunDirection=triggerDir;
+       
+       switch(currentControll){
+           case Controlls.console:
+           gunDirection=triggerDir;
+           break;
+           case Controlls.pc:
+           gunDirection=mouseDir;
+           break;
+       }
 
     }
 }
