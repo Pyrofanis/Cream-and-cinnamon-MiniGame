@@ -9,22 +9,20 @@ public class BulletScript : MonoBehaviour
     public float range;
     [HideInInspector]
     public Quaternion rotationOfBull;
-    
+
     [HideInInspector]
-     public float bulletSpeed;
+    public float bulletSpeed;
     [HideInInspector]
     public Vector3 currentGunDirection;
 
+    public LayerMask layerToDestoy;
+
     private Vector3 targetLoc;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-    Vector3Int currentDirectionCelled=Vector3Int.CeilToInt(currentGunDirection);
-    int rangeInted=Mathf.CeilToInt(range);
-
-
-    targetLoc=currentGunDirection*range +transform.position;
+       
 
     }
 
@@ -32,11 +30,21 @@ public class BulletScript : MonoBehaviour
     void Update()
     {
 
-   transform.position= Vector3.MoveTowards(transform.position,targetLoc,bulletSpeed*Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetLoc, bulletSpeed * Time.deltaTime);
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void CalculateTargetLoc()
     {
-        Destroy(transform.gameObject);
+        //round to int
+        Vector3Int currentDirectionCelled = Vector3Int.CeilToInt(currentGunDirection);
+        int rangeInted = Mathf.CeilToInt(range);
+        //calculates location
+        targetLoc = currentGunDirection * range + transform.position;
+    }
+    private void OnTriggerEnter2D(Collider2D coli)
+    {
+           
+     this.gameObject.SetActive(false);
+
     }
 }
