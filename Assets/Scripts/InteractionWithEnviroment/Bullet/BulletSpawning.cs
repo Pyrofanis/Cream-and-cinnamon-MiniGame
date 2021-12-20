@@ -39,15 +39,11 @@ public class BulletSpawning : MonoBehaviour
     void Update()
     {
         shootTimer += Time.deltaTime;
-        if (DisabledBullet() != null)
-        {
-            Debug.Log(DisabledBullet().name);
-        }
     }
     private void Shoot()
     {
 
-        if (shootTimer >= 1.5f)
+        if (shootTimer >= 1.5f && ShootingDirection.gunDirection!=Vector3.zero)
         {
             GameObject bullet = null;
 
