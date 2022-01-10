@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "fudge.auto-using"
+        "fudge.auto-using",
+        "unity.unity-debug"
     ]
 }

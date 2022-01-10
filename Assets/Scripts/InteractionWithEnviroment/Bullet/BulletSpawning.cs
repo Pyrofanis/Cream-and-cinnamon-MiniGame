@@ -19,7 +19,7 @@ public class BulletSpawning : MonoBehaviour
     private GameObject gun;
 
 
-    public GameObject bulleting;
+    // public GameObject bulleting;
 
     [SerializeField]
     private List<GameObject> bullets;
