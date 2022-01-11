@@ -112,17 +112,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "PcAD",
-                    "id": "cbeb9585-6d94-4fd1-ac8d-3663c2102897",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizontalMovement",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "PC<-,->",
                     "id": "78b32bf9-60d2-48ab-ab22-fa3e0fa87771",
                     "path": "1DAxis",
@@ -236,6 +225,39 @@
                     "name": "positive",
                     "id": "dd1fe846-13b2-48c6-9950-92729f63590b",
                     "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "PcAD",
+                    "id": "07288be2-add8-4c2c-b378-50fc1f1d3fe7",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "7b862ed3-92d2-4a0f-8aa1-47fa200bb532",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "ab3de74a-1892-4da5-8fde-4d5b34967efa",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -455,6 +477,39 @@
                     "name": "positive",
                     "id": "e0e9a248-21f9-4395-8a03-8c37f733312d",
                     "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "PcAD",
+                    "id": "414c598e-731b-4548-ae1b-5739be06ac7f",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "10a2aef7-79f2-4a3a-93ed-07aeefdd93de",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "ac4cb49b-cac7-4498-bb34-9a1f6c10d97e",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

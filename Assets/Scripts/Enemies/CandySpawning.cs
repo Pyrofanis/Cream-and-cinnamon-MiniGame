@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class CandySpawning : MonoBehaviour
 {
-    [Header("Points that candies will spawn from to left to right")]
-    [Header("Left Point")]
+    [Header("Points that candies will spawn from")]
+    [Header("ListOfPoints")]
     [SerializeField]
-    private GameObject leftPoint;
-    [SerializeField]
-    [Header("Right Point")]
-    private GameObject RightPoint;
+    private GameObject[] spawnPoints; 
 
     [SerializeField]
     [Header("Candies to spawn From")]
@@ -18,6 +15,7 @@ public class CandySpawning : MonoBehaviour
     private GameObject[] candyPrefabs;
 
     private List<GameObject> activeCandies;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +30,7 @@ public class CandySpawning : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (leftPoint != null && RightPoint != null)
-            Gizmos.DrawLine(leftPoint.transform.position, RightPoint.transform.position);
+    
     }
     private GameObject ObjectToInstantiate()
 
