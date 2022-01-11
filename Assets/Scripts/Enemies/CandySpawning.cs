@@ -21,7 +21,7 @@ public class CandySpawning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    InstantiateInitialCandys();
+        InstantiateInitialCandys();
     }
 
     // Update is called once per frame
@@ -44,9 +44,9 @@ public class CandySpawning : MonoBehaviour
     {
         foreach (GameObject candy in candyPrefabs)
         {
-            GameObject currentCandy=Instantiate(candy,transform.position,Quaternion.identity);
+            GameObject currentCandy = Instantiate(candy, transform.position, Quaternion.identity);
             if (!activeCandies.Contains(currentCandy))
-            activeCandies.Add(currentCandy);
+                activeCandies.Add(currentCandy);
         }
     }
     private Vector2 RandomPosition(Vector3 leftPos, Vector3 rightPos)
@@ -56,3 +56,4 @@ public class CandySpawning : MonoBehaviour
         return new Vector2(randomX, leftPos.y);
     }
 }
+
