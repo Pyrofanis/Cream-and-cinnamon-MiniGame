@@ -4,58 +4,128 @@ using UnityEngine;
 
 public class CandySpawning : MonoBehaviour
 {
+
+    [Header("CandyPrefab")]
+    [Tooltip("bassicly a target enter you prefeared gameObject here")]
+    [SerializeField]
+    private GameObject candyPrefab;
+
     [Header("Points that candies will spawn from")]
     [Header("ListOfPoints")]
     [SerializeField]
-    private GameObject[] spawnPoints;
+    private Transform[] spawnPoints;
 
     [SerializeField]
-    [Header("Candies to spawn From")]
+    [Header("Candy Variants")]
     [Min(1)]
-    private GameObject[] candyPrefabs;
+    private Sprite[] candySprites;
 
+    [SerializeField]
     private List<GameObject> activeCandies;
 
+    private float timer;
+
+    [Header("Spawn Timer")]
+    [Range(2, 6)]
+    [SerializeField]
+    private float spawnTime;
+
+    public GameObject debugObj;
+    public GameObject debuggerObj;
     // Start is called before the first frame update
     void Start()
     {
-        InstantiateInitialCandys();
+        initialization();
+    }
+    //initialize spawnPointsWith candies
+    private void initialization()
+    {
+        foreach (Transform loc in spawnPoints)
+        {
+            CreateCandy(loc);
+        }
+    }
+    //general purpose function
+    private Sprite GetSprite()
+    {
+        int index = Random.Range(0, candySprites.Length);
+        return candySprites[index];
+
+    }
+    //general purpose function
+    private Transform GetLocation(List<Transform> spawnPoints)
+    {
+        int index = Random.Range(0, spawnPoints.Count);
+        return spawnPoints[index].transform;
     }
 
+    //create initial Candies
+    private void CreateCandy(Transform loc)
+    {
+
+        //instantiate new candy
+        GameObject candy = Instantiate(candyPrefab, loc.position, Quaternion.identity, transform);
+        //change its sprite
+        candy.GetComponentsInChildren<SpriteRenderer>()[1].sprite = GetSprite();
+        //add it to the list
+        activeCandies.Add(candy);
+        candy.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
-
-    }
-    private GameObject GetPrefab(GameObject[] candyPrefabs)
-    {
-        int index = Random.Range(0, candyPrefabs.Length);
-        return candyPrefabs[index];
-    }
-    private Vector3 GetLocation(GameObject[] spawnPoints)
-    {
-        int index = Random.Range(0, spawnPoints.Length);
-        return spawnPoints[index].transform.position;
-    }
-
-    private void InstantiateObjects()
-    {
-        GameObject candy = Instantiate(GetPrefab(candyPrefabs), GetLocation(spawnPoints), Quaternion.identity);
-        activeCandies.Add(candy);
-    }
-    private GameObject ObjectToInstantiate()
-
-    {
-        return null;
-    }
-    private void InstantiateInitialCandys()
-    {
-        foreach (GameObject candy in candyPrefabs)
+        Spawn();
+        if (FindDisabled() != null)
         {
-            GameObject currentCandy = Instantiate(candy, transform.position, Quaternion.identity);
-            if (!activeCandies.Contains(currentCandy))
-                activeCandies.Add(currentCandy);
+            debuggerObj = FindDisabled();
         }
+    }
+    private void Spawn()
+    {
+        timer += Time.deltaTime;
+        //if timer meets criteria and there are evenable spaces
+        if (timer >= spawnTime)
+        {
+            CandyManager();
+            timer = 0;
+        }
+    }
+
+    private void CandyManager()
+    {
+
+        //if  Found disabled
+        if (FindDisabled() != null)
+        {
+            Reuse();
+        }
+    }
+    private void Reuse()
+    {
+        GameObject candy = FindDisabled();
+        //sets candy to the disabled object
+        candy = FindDisabled();
+        //changes its sprite
+        candy.GetComponentsInChildren<SpriteRenderer>()[1].sprite = GetSprite();
+        //reactivates its collider
+        candy.GetComponentInChildren<BoxCollider2D>().enabled = true;
+        //and sets it active
+        candy.SetActive(true);
+
+    }
+    private GameObject FindDisabled()
+    {
+        foreach (GameObject candy in activeCandies)
+        {
+            if (!candy.activeInHierarchy)
+            {
+                debuggerObj = candy;
+                return candy;
+            }
+            else return null;
+        }
+        return null;
+
     }
 }
 

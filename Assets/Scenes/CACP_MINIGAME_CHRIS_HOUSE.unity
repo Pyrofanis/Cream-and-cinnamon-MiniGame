@@ -8430,7 +8430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351332915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.4, z: -10}
+  m_LocalPosition: {x: 0.019999504, y: -2.4001417, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8557,7 +8557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466373358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2052464820}
@@ -13481,23 +13481,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94cfe634aae053a6ea18ee5d1a03e199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  candyPrefab: {fileID: 7426313196828416854, guid: a2e092ea4c503030b97919abbc650e47, type: 3}
   spawnPoints:
-  - {fileID: 2052464819}
-  - {fileID: 508913448}
-  - {fileID: 1559503758}
-  - {fileID: 1971906358}
-  - {fileID: 1136368496}
-  - {fileID: 786850317}
-  - {fileID: 1859519681}
-  - {fileID: 1740456691}
-  - {fileID: 2017986392}
-  - {fileID: 1393130324}
-  candyPrefabs:
-  - {fileID: 7426313196828416854, guid: a2e092ea4c503030b97919abbc650e47, type: 3}
-  - {fileID: 408451755030138517, guid: 7e4ad04263b1049418d09ec9934fc43d, type: 3}
-  - {fileID: 4818413234918844892, guid: 859e69a41c8b117be878f625ceb4165b, type: 3}
-  - {fileID: 2742508124702731301, guid: d9f10cfd9a34d391e8a93bfa465b74da, type: 3}
-  - {fileID: 631790237357681586, guid: d0bd174648167f98981da0fd183cfb4e, type: 3}
+  - {fileID: 2052464820}
+  - {fileID: 508913449}
+  - {fileID: 1559503759}
+  - {fileID: 1971906359}
+  - {fileID: 1136368497}
+  - {fileID: 786850318}
+  - {fileID: 1859519682}
+  - {fileID: 1740456692}
+  - {fileID: 2017986393}
+  - {fileID: 1393130325}
+  candySprites:
+  - {fileID: 21300000, guid: 924b30838652aaf6ca97d7808d071d47, type: 3}
+  - {fileID: 21300000, guid: 1274c8e7466d1e56b98c5452f934e516, type: 3}
+  - {fileID: 21300000, guid: ad5b7fd76fe1ec614a900cd18b3f11e8, type: 3}
+  - {fileID: 21300000, guid: 5ced88e4c4047d82b95e345387c5ec43, type: 3}
+  - {fileID: 21300000, guid: 2d2d8bc39202ffea0916cb483e0c7d2c, type: 3}
+  activeCandies: []
+  spawnTime: 3.09
+  debuggerObj: {fileID: 0}
 --- !u!1 &1615702021
 GameObject:
   m_ObjectHideFlags: 0
@@ -18708,7 +18712,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859519681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.34, y: -2.84, z: 0}
+  m_LocalPosition: {x: 1.428, y: -2.866, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1466373359}
