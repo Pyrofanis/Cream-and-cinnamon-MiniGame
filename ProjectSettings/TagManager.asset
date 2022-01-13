@@ -42,6 +42,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: sky
+    uniqueID: 1377206899
+    locked: 0
+  - name: BgGround
+    uniqueID: 4206750041
+    locked: 0
+  - name: buildings
+    uniqueID: 630582103
+    locked: 0
+  - name: FrontGround
+    uniqueID: 3892622977
+    locked: 0
+  - name: characterAndGun
+    uniqueID: 297135151
+    locked: 0
   - name: Bullets
     uniqueID: 2918413723
     locked: 0

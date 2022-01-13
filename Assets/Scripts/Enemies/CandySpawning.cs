@@ -6,7 +6,7 @@ public class CandySpawning : MonoBehaviour
 {
 
     [Header("CandyPrefab")]
-    [Tooltip("bassicly a target enter you prefeared gameObject here")]
+    [Tooltip("basecly a target enter you prefeared gameObject here")]
     [SerializeField]
     private GameObject candyPrefab;
 
@@ -66,7 +66,10 @@ public class CandySpawning : MonoBehaviour
         //instantiate new candy
         GameObject candy = Instantiate(candyPrefab, loc.position, Quaternion.identity, transform);
         //change its sprite
+       Sprite sprite=GetSprite();
         candy.GetComponentsInChildren<SpriteRenderer>()[1].sprite = GetSprite();
+        //name Candy
+        candy.name="Candy"+" Coords:"+loc+" Sprite"+sprite.name;
         //add it to the list
         activeCandies.Add(candy);
         candy.SetActive(false);
@@ -117,6 +120,7 @@ public class CandySpawning : MonoBehaviour
     {
         foreach (GameObject candy in activeCandies)
         {
+            Debug.Log(candy.name);
             if (!candy.activeInHierarchy)
             {
                 debuggerObj = candy;
@@ -124,6 +128,7 @@ public class CandySpawning : MonoBehaviour
             }
             else return null;
         }
+
         return null;
 
     }

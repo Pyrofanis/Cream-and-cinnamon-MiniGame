@@ -163,8 +163,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 297135151
+  m_SortingLayer: 5
   m_SortingOrder: 400
   m_Sprite: {fileID: 21300000, guid: ba962402fe13cab4a9e20f3170ffcab9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -206,8 +206,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e123e9259b95042bbef6bf68b8dc80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootTimer: 0
   bullPrefab: {fileID: 7373945032873591253, guid: b68929b49f5a3210bbc918390c316bd2, type: 3}
   range: 10
+  bulletSpeed: 0
+  bullets: []
 --- !u!1 &8772166871236352466
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,8 +366,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 297135151
+  m_SortingLayer: 5
   m_SortingOrder: 350
   m_Sprite: {fileID: 21300000, guid: c6f98231796d2c94c932626b10cb1da4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
