@@ -22,7 +22,7 @@ public class BulletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
 
     }
 
@@ -41,10 +41,20 @@ public class BulletScript : MonoBehaviour
         //calculates location
         targetLoc = currentGunDirection * range + transform.position;
     }
-    private void OnTriggerEnter2D(Collider2D coli)
+    //interactions with gameObject and disables bullet
+    private void OnTriggerEnter2D(Collider2D other)
     {
-           
-     this.gameObject.SetActive(false);
+
+        CandyInteractionWthBullet(other.gameObject);
+        this.gameObject.SetActive(false);
+    }
+    private void CandyInteractionWthBullet(GameObject candy)
+    {
+
+        if (candy.GetComponent<CandyInteractions>() != null)
+        {
+            candy.GetComponent<CandyInteractions>().InteractionsWithBullet();
+        }
 
     }
 }

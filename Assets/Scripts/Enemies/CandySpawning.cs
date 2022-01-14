@@ -21,10 +21,10 @@ public class CandySpawning : MonoBehaviour
     [Min(1)]
     private Sprite[] candySprites;
 
-    [SerializeField]
-    private List<GameObject> activeCandies;
-    [SerializeField]
-    public static List<GameObject> disabledCandies;
+    [HideInInspector]
+    public  List<GameObject> activeCandies;
+    [HideInInspector]
+    public  List<GameObject> disabledCandies;
 
     private float timer;
 

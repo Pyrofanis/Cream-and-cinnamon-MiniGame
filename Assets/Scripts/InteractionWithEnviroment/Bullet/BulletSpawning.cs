@@ -58,7 +58,8 @@ public class BulletSpawning : MonoBehaviour
             {
                 //find already instantiated bullet   
                 bullet = DisabledBullet();
-                //reset position
+                //reset position and rotation
+                bullet.transform.rotation=gun.transform.rotation;
                 bullet.transform.position = gun.transform.position;
                 //Set Active
                 bullet.SetActive(true);
