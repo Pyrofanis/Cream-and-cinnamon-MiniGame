@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CandySpawning : MonoBehaviour
@@ -22,6 +23,8 @@ public class CandySpawning : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> activeCandies;
+    [SerializeField]
+    private List<GameObject> disabledCandies;
 
     private float timer;
 
@@ -71,7 +74,7 @@ public class CandySpawning : MonoBehaviour
         //name Candy
         candy.name="Candy"+" Coords:"+loc+" Sprite"+sprite.name;
         //add it to the list
-        activeCandies.Add(candy);
+        disabledCandies.Add(candy);
         candy.SetActive(false);
     }
     // Update is called once per frame
@@ -112,25 +115,24 @@ public class CandySpawning : MonoBehaviour
         candy.GetComponentsInChildren<SpriteRenderer>()[1].sprite = GetSprite();
         //reactivates its collider
         candy.GetComponentInChildren<BoxCollider2D>().enabled = true;
+        //adds It To Active List need to be Re added to disabled list On Hit
+        activeCandies.Add(candy);
+        disabledCandies.Remove(candy);
         //and sets it active
         candy.SetActive(true);
 
     }
     private GameObject FindDisabled()
     {
-        foreach (GameObject candy in activeCandies)
-        {
-            Debug.Log(candy.name);
-            if (!candy.activeInHierarchy)
-            {
-                debuggerObj = candy;
-                return candy;
-            }
-            else return null;
+        if (disabledCandies.Count>0){
+            int index=  Random.Range(0,disabledCandies.Count);
+                        GameObject candy=disabledCandies[index];
+            return candy;
         }
-
         return null;
 
-    }
+        }
+
+
 }
 
