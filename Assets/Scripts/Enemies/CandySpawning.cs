@@ -24,7 +24,7 @@ public class CandySpawning : MonoBehaviour
     [SerializeField]
     private List<GameObject> activeCandies;
     [SerializeField]
-    private List<GameObject> disabledCandies;
+    public static List<GameObject> disabledCandies;
 
     private float timer;
 
@@ -69,10 +69,10 @@ public class CandySpawning : MonoBehaviour
         //instantiate new candy
         GameObject candy = Instantiate(candyPrefab, loc.position, Quaternion.identity, transform);
         //change its sprite
-       Sprite sprite=GetSprite();
+        Sprite sprite = GetSprite();
         candy.GetComponentsInChildren<SpriteRenderer>()[1].sprite = GetSprite();
         //name Candy
-        candy.name="Candy"+" Coords:"+loc+" Sprite"+sprite.name;
+        candy.name = "Candy" + " Coords:" + loc + " Sprite" + sprite.name;
         //add it to the list
         disabledCandies.Add(candy);
         candy.SetActive(false);
@@ -81,11 +81,9 @@ public class CandySpawning : MonoBehaviour
     void Update()
     {
         Spawn();
-        if (FindDisabled() != null)
-        {
-            debuggerObj = FindDisabled();
-        }
     }
+
+    //update function to respawn candies in certain time
     private void Spawn()
     {
         timer += Time.deltaTime;
@@ -97,20 +95,23 @@ public class CandySpawning : MonoBehaviour
         }
     }
 
+    //prevents reusing an non existent object
     private void CandyManager()
     {
 
         //if  Found disabled
-        if (FindDisabled() != null)
+        if (SelectDisabled() != null)
         {
             Reuse();
         }
     }
+
+    //reusing function
     private void Reuse()
     {
-        GameObject candy = FindDisabled();
+        GameObject candy = SelectDisabled();
         //sets candy to the disabled object
-        candy = FindDisabled();
+        candy = SelectDisabled();
         //changes its sprite
         candy.GetComponentsInChildren<SpriteRenderer>()[1].sprite = GetSprite();
         //reactivates its collider
@@ -122,17 +123,17 @@ public class CandySpawning : MonoBehaviour
         candy.SetActive(true);
 
     }
-    private GameObject FindDisabled()
+    //selects randomly disabled Object
+    private GameObject SelectDisabled()
     {
-        if (disabledCandies.Count>0){
-            int index=  Random.Range(0,disabledCandies.Count);
-                        GameObject candy=disabledCandies[index];
+        if (disabledCandies.Count > 0)
+        {
+            int index = Random.Range(0, disabledCandies.Count);
+            GameObject candy = disabledCandies[index];
             return candy;
         }
         return null;
-
-        }
-
+    }
 
 }
 
